@@ -8,7 +8,6 @@ package com.spark.samples
 
 import org.apache.spark._
 import org.apache.spark.sql._
-import org.apache.spark.sql.types.StructType
 
 //import sqlContext.implicits._
 
@@ -117,7 +116,8 @@ object JoinGroupByTest {
     //GROUPBY  functions returns key and iterator of values so not efficient.
     //Please use combine by key
     // needToGroup.map(t => "Name: " + t.toString()).collect().foreach(println)
-
+    print(new java.io.File(".").getCanonicalPath)
+    //print(Object.getClass.getResource("").getPath)
 
     sc.stop()
   }
